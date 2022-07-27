@@ -10,9 +10,9 @@ script:
   - docker run -e CI=true vikram-chauhan/react-test npm test
 
 after_success:
-  - docker build -t vikram-chauhan/multi-client ./client
-  - docker build -t vikram-chauhan/multi-nginx ./nginx
-  - docker build -t vikram-chauhan/multi-server ./server
-  - docker build -t vikram-chauhan/multi-worker ./worker
+  - docker build -t vikramchauhan27/multi-client ./client
+  - docker build -t vikramchauhan27/multi-nginx ./nginx
+  - docker build -t vikramchauhan27/multi-server ./server
+  - docker build -t vikramchauhan27/multi-worker ./worker
   - echo "$DOCKER_PWD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push vikram-chauhan/multi-client vikram-chauhan/multi-nginx vikram-chauhan/multi-server vikram-chauhan/multi-worker
+  - docker push new-repo:vikramchauhan27/multi-client vikramchauhan27/multi-nginx vikramchauhan27/multi-server vikramchauhan27/multi-worker
