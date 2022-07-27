@@ -15,4 +15,4 @@ after_success:
   - docker build -t vikramchauhan27/multi-server ./server
   - docker build -t vikramchauhan27/multi-worker ./worker
   - echo "$DOCKER_PWD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push vikramchauhan27/multi-client vikramchauhan27/multi-nginx vikramchauhan27/multi-server vikramchauhan27/multi-worker
+  - docker push new-repo:vikramchauhan27/multi-client new-repo:vikramchauhan27/multi-nginx new-repo:vikramchauhan27/multi-server new-repo:vikramchauhan27/multi-worker
